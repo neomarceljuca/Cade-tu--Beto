@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Assets/Scripts/TesteTouchScreenButton.gd" type="Script" id=1]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 55.0
+
+[node name="hud" type="CanvasLayer"]
+
+[node name="TesteTouchScreenButton" type="TouchScreenButton" parent="."]
+position = Vector2( 493.883, 194.186 )
+shape = SubResource( 1 )
+shape_centered = false
+script = ExtResource( 1 )
+[connection signal="pressed" from="TesteTouchScreenButton" to="TesteTouchScreenButton" method="_on_TesteTouchScreenButton_pressed"]

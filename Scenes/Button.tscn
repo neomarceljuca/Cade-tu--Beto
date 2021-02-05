@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Assets/Sound/Click.wav" type="AudioStream" id=1]
+
+[node name="Button" type="Button"]
+margin_left = 8.0
+margin_top = 16.0
+margin_right = 96.0
+margin_bottom = 40.0
+text = "COMEÇAR"
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SomDeClick" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 1 )
+volume_db = 24.0

@@ -1,0 +1,97 @@
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://Scenes/Button.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Assets/Sprites/menuBackground.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Scripts/Button.gd" type="Script" id=3]
+[ext_resource path="res://Assets/Sprites/BetoVerde.png" type="Texture" id=4]
+[ext_resource path="res://Assets/Sound/TrilhaInicial.wav" type="AudioStream" id=5]
+[ext_resource path="res://Assets/Scripts/BetoOverLay.gd" type="Script" id=6]
+[ext_resource path="res://Assets/Sprites/BetoMenosLingua.png" type="Texture" id=7]
+[ext_resource path="res://Assets/Scripts/AudioStreamPlayer2D.gd" type="Script" id=8]
+[ext_resource path="res://Assets/Scripts/ButtonCreditos.gd" type="Script" id=9]
+[ext_resource path="res://Assets/Sprites/PlacaMadeira.png" type="Texture" id=10]
+[ext_resource path="res://Assets/Font/Kiddos-Demo.ttf" type="DynamicFontData" id=11]
+[ext_resource path="res://Assets/Sprites/sombra.png" type="Texture" id=12]
+[ext_resource path="res://Assets/Scripts/Menu.gd" type="Script" id=13]
+
+[sub_resource type="DynamicFont" id=1]
+size = 175
+outline_size = 2
+outline_color = Color( 0.196078, 0.0313726, 0.0313726, 1 )
+font_data = ExtResource( 11 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 54
+outline_size = 2
+outline_color = Color( 0.419608, 0.227451, 0.227451, 1 )
+font_data = ExtResource( 11 )
+
+[node name="Menu" type="Node2D"]
+script = ExtResource( 13 )
+
+[node name="menuBackground" type="Sprite" parent="."]
+position = Vector2( 511.5, 299 )
+scale = Vector2( 1.63738, 1.4901 )
+texture = ExtResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 355.214, 544.347 )
+rotation = -0.0771469
+scale = Vector2( 1.1916, 0.374046 )
+texture = ExtResource( 12 )
+
+[node name="PlacaMadeira" type="Sprite" parent="."]
+position = Vector2( 362.508, 304.128 )
+rotation = -0.0907571
+scale = Vector2( 0.229321, 0.229321 )
+texture = ExtResource( 10 )
+
+[node name="Button" parent="PlacaMadeira" instance=ExtResource( 1 )]
+margin_left = -741.486
+margin_top = -563.403
+margin_right = 628.514
+margin_bottom = -197.403
+rect_rotation = 4.60475
+custom_fonts/font = SubResource( 1 )
+text = "ESCOLHER MAPA"
+script = ExtResource( 3 )
+
+[node name="Button2" parent="PlacaMadeira" instance=ExtResource( 1 )]
+margin_left = -730.091
+margin_top = -15.0249
+margin_right = 639.909
+margin_bottom = 350.975
+rect_rotation = 0.342097
+custom_fonts/font = SubResource( 1 )
+text = "CREDITOS"
+script = ExtResource( 9 )
+
+[node name="BetoVerde" type="Sprite" parent="."]
+position = Vector2( 732, 340 )
+scale = Vector2( 0.541667, 0.541667 )
+texture = ExtResource( 4 )
+
+[node name="BetoOverLay" type="Sprite" parent="."]
+position = Vector2( 732, 340 )
+scale = Vector2( 0.542, 0.542 )
+texture = ExtResource( 7 )
+script = ExtResource( 6 )
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 5 )
+autoplay = true
+script = ExtResource( 8 )
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+margin_left = 181.042
+margin_top = 106.319
+margin_right = 503.042
+margin_bottom = 177.319
+rect_rotation = -12.6348
+custom_fonts/normal_font = SubResource( 2 )
+text = "Cade tu, beto"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="button_up" from="PlacaMadeira/Button" to="PlacaMadeira/Button" method="_on_Button_button_up"]
+[connection signal="button_up" from="PlacaMadeira/Button2" to="PlacaMadeira/Button2" method="_on_Button_button_up"]
