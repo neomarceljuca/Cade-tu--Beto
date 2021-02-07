@@ -1,4 +1,5 @@
 extends AudioStreamPlayer2D
 
 func _ready():
-	pass 
+	playing = true
+	autoplay = true 
