@@ -8,7 +8,7 @@ var meuBotao
 
 func _ready():
 	#setup
-	meuBotao = get_tree().get_root().get_child(1).get_node("hud/TesteTouchScreenButton")
+	meuBotao = get_tree().root.get_node("Node2D/hud/TesteTouchScreenButton")
 	rng.randomize()
 	screen = get_viewport().size
 	_randomPos()
