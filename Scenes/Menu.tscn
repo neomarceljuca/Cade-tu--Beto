@@ -15,16 +15,16 @@
 [ext_resource path="res://Assets/Scripts/Menu.gd" type="Script" id=13]
 [ext_resource path="res://Scenes/MenuSelecaoMapa.tscn" type="PackedScene" id=14]
 
+[sub_resource type="DynamicFont" id=2]
+size = 265
+outline_size = 2
+outline_color = Color( 0.419608, 0.227451, 0.227451, 1 )
+font_data = ExtResource( 11 )
+
 [sub_resource type="DynamicFont" id=1]
 size = 175
 outline_size = 2
 outline_color = Color( 0.196078, 0.0313726, 0.0313726, 1 )
-font_data = ExtResource( 11 )
-
-[sub_resource type="DynamicFont" id=2]
-size = 54
-outline_size = 2
-outline_color = Color( 0.419608, 0.227451, 0.227451, 1 )
 font_data = ExtResource( 11 )
 
 [node name="Menu" type="Node2D"]
@@ -33,21 +33,36 @@ script = ExtResource( 13 )
 [node name="InitialMenu" type="Node2D" parent="."]
 
 [node name="menuBackground" type="Sprite" parent="InitialMenu"]
-position = Vector2( 511.5, 299 )
-scale = Vector2( 1.63738, 1.4901 )
+position = Vector2( 792.5, 377.428 )
+scale = Vector2( 2.55431, 1.94555 )
 texture = ExtResource( 2 )
 
-[node name="Sprite" type="Sprite" parent="InitialMenu"]
-position = Vector2( 355.214, 544.347 )
-rotation = -0.0771469
-scale = Vector2( 1.1916, 0.374046 )
-texture = ExtResource( 12 )
-
 [node name="PlacaMadeira" type="Sprite" parent="InitialMenu"]
-position = Vector2( 362.508, 304.128 )
-rotation = -0.0907571
-scale = Vector2( 0.229321, 0.229321 )
+position = Vector2( 574.895, 373.438 )
+rotation = -0.0461188
+scale = Vector2( 0.361983, 0.308221 )
 texture = ExtResource( 10 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="InitialMenu/PlacaMadeira"]
+margin_left = -703.686
+margin_top = -904.153
+margin_right = 623.314
+margin_bottom = -427.153
+rect_rotation = -8.15254
+custom_fonts/normal_font = SubResource( 2 )
+text = "Cade tu, beto"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="InitialMenu/PlacaMadeira"]
+position = Vector2( -126.616, 1040.33 )
+rotation = 0.0136102
+scale = Vector2( 5.19621, 1.6311 )
+texture = ExtResource( 12 )
 
 [node name="Button" parent="InitialMenu/PlacaMadeira" instance=ExtResource( 1 )]
 margin_left = -741.486
@@ -70,12 +85,12 @@ text = "CREDITOS"
 script = ExtResource( 9 )
 
 [node name="BetoVerde" type="Sprite" parent="InitialMenu"]
-position = Vector2( 732, 340 )
+position = Vector2( 1160.95, 415.227 )
 scale = Vector2( 0.541667, 0.541667 )
 texture = ExtResource( 4 )
 
 [node name="BetoOverLay" type="Sprite" parent="InitialMenu"]
-position = Vector2( 732, 340 )
+position = Vector2( 1160.95, 415.227 )
 scale = Vector2( 0.542, 0.542 )
 texture = ExtResource( 7 )
 script = ExtResource( 6 )
@@ -84,18 +99,6 @@ script = ExtResource( 6 )
 stream = ExtResource( 5 )
 autoplay = true
 script = ExtResource( 8 )
-
-[node name="RichTextLabel" type="RichTextLabel" parent="InitialMenu"]
-margin_left = 181.042
-margin_top = 106.319
-margin_right = 503.042
-margin_bottom = 177.319
-rect_rotation = -12.6348
-custom_fonts/normal_font = SubResource( 2 )
-text = "Cade tu, beto"
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="MenuSelecaoMapa" parent="." instance=ExtResource( 14 )]
 [connection signal="button_up" from="InitialMenu/PlacaMadeira/Button" to="InitialMenu/PlacaMadeira/Button" method="_on_Button_button_up"]

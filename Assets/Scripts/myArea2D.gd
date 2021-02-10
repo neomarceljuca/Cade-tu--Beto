@@ -9,6 +9,7 @@ func _ready():
 	emissor = load("res://Scenes/EmissorConfete.tscn")
 	emissor_instance = emissor.instance()
 	emissor_instance.set_name("MeuEmissor")
+	get_tree().root.add_child(emissor_instance)
 	placar = get_tree().root.get_node("Node2D/Display/CanvasLayer/Placar")
 	print(placar)
 	
@@ -20,7 +21,7 @@ func _ready():
 
 func on_click():
 	print("Voce me achou!")
-	get_tree().root.add_child(emissor_instance)
+	
 	emissor_instance.position.x = Beto.position.x
 	emissor_instance.position.y = Beto.position.y
 	emissor_instance.scale = Vector2(Beto.scale.x, Beto.scale.y)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://Assets/Scripts/ButtonMap1.gd" type="Script" id=5]
 [ext_resource path="res://Assets/Font/Kiddos-Demo.ttf" type="DynamicFontData" id=6]
@@ -10,29 +10,27 @@
 [ext_resource path="res://Assets/Scripts/MenuSelecaoMapa.gd" type="Script" id=13]
 [ext_resource path="res://Assets/Sprites/—Pngtree—green leaves branches fallen zero_937002.jpg" type="Texture" id=14]
 
-[sub_resource type="CurveTexture" id=3]
-
-[sub_resource type="StreamTexture" id=4]
+[sub_resource type="StreamTexture" id=1]
 flags = 4
 load_path = "res://.import/Mapa1.png-6de8663338cfc022f7736a8710180736.stex"
 
-[sub_resource type="StreamTexture" id=5]
+[sub_resource type="StreamTexture" id=2]
 flags = 4
 load_path = "res://.import/Mapa2.png-19a477b8e08cb24370a8859977decdfb.stex"
 
-[sub_resource type="StreamTexture" id=6]
+[sub_resource type="StreamTexture" id=3]
 flags = 4
 load_path = "res://.import/Mapa3.png-9c14feb0fc4752dcd64de0343505113f.stex"
 
-[sub_resource type="StreamTexture" id=7]
+[sub_resource type="StreamTexture" id=4]
 flags = 4
 load_path = "res://.import/Mapa4.png-08b4af311923c46d933c204e7803b5a3.stex"
 
-[sub_resource type="StreamTexture" id=8]
+[sub_resource type="StreamTexture" id=5]
 flags = 4
 load_path = "res://.import/Mapa5.png-70fb84bc46f5603604b52fc8263ccedd.stex"
 
-[sub_resource type="DynamicFont" id=2]
+[sub_resource type="DynamicFont" id=6]
 size = 60
 outline_size = 5
 outline_color = Color( 0, 0, 0, 1 )
@@ -48,26 +46,20 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Sprite" type="Sprite" parent="Control"]
-modulate = Color( 1, 0.0666667, 0.0666667, 1 )
-position = Vector2( 510.52, 311.046 )
-scale = Vector2( 0.510618, 654.286 )
-texture = SubResource( 3 )
-
 [node name="—Pngtree—green leaves branches fallen zero_937002" type="Sprite" parent="Control"]
-modulate = Color( 1, 1, 1, 0.266667 )
-position = Vector2( 500.85, 298.814 )
-scale = Vector2( 0.22211, 0.247454 )
+modulate = Color( 0.34902, 0.34902, 0.34902, 1 )
+position = Vector2( 784.232, 356.836 )
+scale = Vector2( 0.34206, 0.291112 )
 texture = ExtResource( 14 )
 
 [node name="ButtonMap1" type="Button" parent="Control"]
-anchor_top = -0.034
-anchor_bottom = -0.034
-margin_left = 54.818
-margin_top = 22.269
-margin_right = 333.482
-margin_bottom = 223.149
-icon = SubResource( 4 )
+anchor_right = 39.06
+anchor_bottom = 18.037
+margin_left = 85.1361
+margin_top = 67.2717
+margin_right = -1077.26
+margin_bottom = -404.208
+icon = SubResource( 1 )
 expand_icon = true
 script = ExtResource( 5 )
 __meta__ = {
@@ -77,13 +69,13 @@ __meta__ = {
 [node name="ButtonMap2" type="Button" parent="Control"]
 anchor_left = 0.04
 anchor_top = 0.019
-anchor_right = 0.311
-anchor_bottom = 0.342
-margin_left = 396.4
-margin_top = 20.24
-margin_right = 664.56
-margin_bottom = 218.32
-icon = SubResource( 5 )
+anchor_right = 39.034
+anchor_bottom = 18.085
+margin_left = 583.536
+margin_top = 62.2848
+margin_right = -576.224
+margin_bottom = -410.355
+icon = SubResource( 2 )
 expand_icon = true
 script = ExtResource( 10 )
 __meta__ = {
@@ -95,11 +87,11 @@ anchor_left = 0.04
 anchor_top = 0.019
 anchor_right = 0.311
 anchor_bottom = 0.342
-margin_left = 710.4
-margin_top = 27.24
-margin_right = 973.56
-margin_bottom = 240.32
-icon = SubResource( 6 )
+margin_left = 1083.54
+margin_top = 64.2395
+margin_right = 1472.7
+margin_bottom = 301.32
+icon = SubResource( 3 )
 expand_icon = true
 script = ExtResource( 11 )
 __meta__ = {
@@ -111,11 +103,11 @@ anchor_left = 0.04
 anchor_top = 0.019
 anchor_right = 0.311
 anchor_bottom = 0.342
-margin_left = 67.4
-margin_top = 320.24
-margin_right = 303.56
-margin_bottom = 502.32
-icon = SubResource( 7 )
+margin_left = 83.5361
+margin_top = 402.331
+margin_right = 472.696
+margin_bottom = 639.411
+icon = SubResource( 4 )
 expand_icon = true
 script = ExtResource( 8 )
 __meta__ = {
@@ -127,12 +119,12 @@ anchor_left = 0.04
 anchor_top = 0.019
 anchor_right = 0.311
 anchor_bottom = 0.342
-margin_left = 385.4
-margin_top = 323.24
-margin_right = 646.56
-margin_bottom = 500.32
+margin_left = 583.536
+margin_top = 402.331
+margin_right = 972.696
+margin_bottom = 639.411
 rect_pivot_offset = Vector2( 125.5, 128.893 )
-icon = SubResource( 8 )
+icon = SubResource( 5 )
 expand_icon = true
 script = ExtResource( 9 )
 __meta__ = {
@@ -144,12 +136,12 @@ anchor_left = 0.04
 anchor_top = 0.019
 anchor_right = 0.311
 anchor_bottom = 0.342
-margin_left = 696.4
-margin_top = 323.24
-margin_right = 999.56
-margin_bottom = 523.32
+margin_left = 1083.54
+margin_top = 400.65
+margin_right = 1472.7
+margin_bottom = 637.729
 rect_pivot_offset = Vector2( 125.5, 128.893 )
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 6 )
 text = "Aleatorio"
 expand_icon = true
 script = ExtResource( 7 )

@@ -1,3 +1,57 @@
-[gd_scene format=2]
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Assets/Font/CHERL__.TTF" type="DynamicFontData" id=1]
+[ext_resource path="res://Assets/Font/KVMOTOR.TTF" type="DynamicFontData" id=2]
+[ext_resource path="res://Assets/Sprites/—Pngtree—green leaves branches fallen zero_937002.jpg" type="Texture" id=3]
+[ext_resource path="res://icon.png" type="Texture" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+size = 64
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 51
+font_data = ExtResource( 2 )
 
 [node name="Node2D" type="Node2D"]
+
+[node name="Sprite" type="Sprite" parent="."]
+modulate = Color( 0.309804, 0.309804, 0.309804, 1 )
+position = Vector2( 837.981, 476.248 )
+scale = Vector2( 0.354617, 0.354617 )
+texture = ExtResource( 3 )
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 373.852
+margin_top = 9.89792
+margin_right = 661.852
+margin_bottom = 102.898
+custom_fonts/normal_font = SubResource( 1 )
+text = "Creditos"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="."]
+margin_left = 72.6365
+margin_top = 188.546
+margin_right = 911.636
+margin_bottom = 543.546
+custom_fonts/normal_font = SubResource( 2 )
+text = "Marcel Juca 
+
+Pedro Leonardo Torquato
+
+Estudantes de Ciência da Computação da Universidade de Fortaleza"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Return Button" type="TouchScreenButton" parent="."]
+position = Vector2( 890, 16 )
+scale = Vector2( 1.875, 1.875 )
+normal = ExtResource( 4 )
