@@ -5,8 +5,7 @@ func _ready():
 	pass 
 
 func on_click():
-	print("Voce me achou!")
-	get_tree().change_scene("res://Scenes/MenuSelecaoMapa.tscn")
+	get_tree().change_scene("res://Scenes/Menu.tscn")
 
 
 func _on_Area2D_input_event(viewport, event, shape_idx):

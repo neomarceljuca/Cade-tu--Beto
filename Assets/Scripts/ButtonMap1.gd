@@ -1,5 +1,4 @@
 extends Button
-var player_vars
 func _ready():
 	pass
 
