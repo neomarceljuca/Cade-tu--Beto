@@ -1,44 +1,25 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://Assets/Scripts/TButtonMap1.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Sprites/Mapa1.png" type="Texture" id=2]
 [ext_resource path="res://Assets/Sprites/kisspng-arrow-computer-icons-clip-art-arrow-5abf5d555c2ee2.1972264115224907093776.png" type="Texture" id=3]
 [ext_resource path="res://Assets/Sound/Click.wav" type="AudioStream" id=4]
-[ext_resource path="res://Assets/Scripts/ButtonMap1.gd" type="Script" id=5]
+[ext_resource path="res://Assets/Scripts/TButtonMap2.gd" type="Script" id=5]
 [ext_resource path="res://Assets/Font/Kiddos-Demo.ttf" type="DynamicFontData" id=6]
-[ext_resource path="res://Assets/Scripts/ButtonMapRandom.gd" type="Script" id=7]
-[ext_resource path="res://Assets/Scripts/ButtonMap4.gd" type="Script" id=8]
-[ext_resource path="res://Assets/Scripts/ButtonMap5.gd" type="Script" id=9]
-[ext_resource path="res://Assets/Scripts/ButtonMap2.gd" type="Script" id=10]
-[ext_resource path="res://Assets/Scripts/ButtonMap3.gd" type="Script" id=11]
+[ext_resource path="res://Assets/Sprites/Mapa4.png" type="Texture" id=7]
+[ext_resource path="res://Assets/Scripts/TRandMap.gd" type="Script" id=8]
+[ext_resource path="res://Assets/Sprites/Mapa3.png" type="Texture" id=9]
+[ext_resource path="res://Assets/Sprites/Mapa5.png" type="Texture" id=10]
+[ext_resource path="res://Assets/Sprites/Mapa2.png" type="Texture" id=11]
 [ext_resource path="res://Assets/Scripts/ReturnButton2.gd" type="Script" id=12]
 [ext_resource path="res://Assets/Scripts/MenuSelecaoMapa.gd" type="Script" id=13]
 [ext_resource path="res://Assets/Sprites/—Pngtree—green leaves branches fallen zero_937002.jpg" type="Texture" id=14]
+[ext_resource path="res://Assets/Scripts/TButtonMap4.gd" type="Script" id=15]
+[ext_resource path="res://Assets/Scripts/TButtonMap5.gd" type="Script" id=16]
+[ext_resource path="res://Assets/Scripts/TButtonMap3.gd" type="Script" id=17]
 
-[sub_resource type="StreamTexture" id=1]
-flags = 4
-load_path = "res://.import/Mapa1.png-6de8663338cfc022f7736a8710180736.stex"
-
-[sub_resource type="StreamTexture" id=2]
-flags = 4
-load_path = "res://.import/Mapa2.png-19a477b8e08cb24370a8859977decdfb.stex"
-
-[sub_resource type="StreamTexture" id=3]
-flags = 4
-load_path = "res://.import/Mapa3.png-9c14feb0fc4752dcd64de0343505113f.stex"
-
-[sub_resource type="StreamTexture" id=4]
-flags = 4
-load_path = "res://.import/Mapa4.png-08b4af311923c46d933c204e7803b5a3.stex"
-
-[sub_resource type="StreamTexture" id=5]
-flags = 4
-load_path = "res://.import/Mapa5.png-70fb84bc46f5603604b52fc8263ccedd.stex"
-
-[sub_resource type="DynamicFont" id=6]
-size = 60
-outline_size = 5
-outline_color = Color( 0, 0, 0, 1 )
+[sub_resource type="DynamicFont" id=1]
+size = 100
 font_data = ExtResource( 6 )
 
 [node name="MenuSelecaoMapa" type="Node2D"]
@@ -58,104 +39,58 @@ scale = Vector2( 0.34206, 0.291112 )
 texture = ExtResource( 14 )
 
 [node name="TButtonMap1" type="TouchScreenButton" parent="Control"]
-position = Vector2( 58.8628, 57.1809 )
-scale = Vector2( 0.604759, 0.604759 )
+position = Vector2( 110.995, 38.6226 )
+rotation = 0.253294
+scale = Vector2( 0.504366, 0.504366 )
 normal = ExtResource( 2 )
 script = ExtResource( 1 )
 
-[node name="ButtonMap1" type="Button" parent="Control"]
-anchor_right = 39.06
-anchor_bottom = 18.037
-margin_left = 1185.21
-margin_top = 242.178
-margin_right = 22.8131
-margin_bottom = -229.302
-icon = SubResource( 1 )
-expand_icon = true
+[node name="TButtonMap2" type="TouchScreenButton" parent="Control"]
+position = Vector2( 438.511, 190.816 )
+rotation = -0.299225
+scale = Vector2( 0.604759, 0.604759 )
+normal = ExtResource( 11 )
 script = ExtResource( 5 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
-[node name="ButtonMap2" type="Button" parent="Control"]
-anchor_left = 0.04
-anchor_top = 0.019
-anchor_right = 39.034
-anchor_bottom = 18.085
-margin_left = 498.4
-margin_top = 62.2848
-margin_right = -661.36
-margin_bottom = -410.355
-icon = SubResource( 2 )
-expand_icon = true
-script = ExtResource( 10 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="TButtonMap3" type="TouchScreenButton" parent="Control"]
+position = Vector2( 946.649, 96.3804 )
+rotation = 0.144364
+scale = Vector2( 0.604759, 0.604759 )
+normal = ExtResource( 9 )
+script = ExtResource( 17 )
 
-[node name="ButtonMap3" type="Button" parent="Control"]
-anchor_left = 0.04
-anchor_top = 0.019
-anchor_right = 0.311
-anchor_bottom = 0.342
-margin_left = 948.4
-margin_top = 64.2395
-margin_right = 1337.56
-margin_bottom = 301.32
-icon = SubResource( 3 )
-expand_icon = true
-script = ExtResource( 11 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="TButtonMap4" type="TouchScreenButton" parent="Control"]
+position = Vector2( 49.9539, 480.847 )
+rotation = -0.272394
+scale = Vector2( 0.604759, 0.604759 )
+normal = ExtResource( 7 )
+script = ExtResource( 15 )
 
-[node name="ButtonMap4" type="Button" parent="Control"]
-anchor_left = 0.04
-anchor_top = 0.019
-anchor_right = 0.311
-anchor_bottom = 0.342
-margin_left = 48.4
-margin_top = 402.331
-margin_right = 437.56
-margin_bottom = 639.411
-icon = SubResource( 4 )
-expand_icon = true
+[node name="TButtonMap5" type="TouchScreenButton" parent="Control"]
+position = Vector2( 612.61, 413.38 )
+rotation = 0.135586
+scale = Vector2( 0.50505, 0.50505 )
+normal = ExtResource( 10 )
+script = ExtResource( 16 )
+
+[node name="TRandMap" type="TouchScreenButton" parent="Control"]
+modulate = Color( 0.0941176, 0.0941176, 0.0941176, 1 )
+position = Vector2( 1031.06, 501.508 )
+rotation = -0.261691
+scale = Vector2( 0.0792094, 0.0787315 )
+normal = ExtResource( 14 )
 script = ExtResource( 8 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
-[node name="ButtonMap5" type="Button" parent="Control"]
-anchor_left = 0.04
-anchor_top = 0.019
-anchor_right = 0.311
-anchor_bottom = 0.342
-margin_left = 498.4
-margin_top = 402.331
-margin_right = 887.56
-margin_bottom = 639.411
-rect_pivot_offset = Vector2( 125.5, 128.893 )
-icon = SubResource( 5 )
-expand_icon = true
-script = ExtResource( 9 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="ButtonMapRandom" type="Button" parent="Control"]
-anchor_left = 0.04
-anchor_top = 0.019
-anchor_right = 0.311
-anchor_bottom = 0.342
-margin_left = 948.4
-margin_top = 400.65
-margin_right = 1337.56
-margin_bottom = 637.729
-rect_pivot_offset = Vector2( 125.5, 128.893 )
-custom_fonts/font = SubResource( 6 )
+[node name="RichTextLabel" type="RichTextLabel" parent="Control"]
+anchor_right = 20.397
+anchor_bottom = 8.079
+margin_left = 1069.34
+margin_top = 537.722
+margin_right = 611.456
+margin_bottom = 327.562
+rect_rotation = -14.9938
+custom_fonts/normal_font = SubResource( 1 )
 text = "Aleatorio"
-expand_icon = true
-script = ExtResource( 7 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -170,10 +105,9 @@ script = ExtResource( 12 )
 stream = ExtResource( 4 )
 volume_db = 10.0
 [connection signal="released" from="Control/TButtonMap1" to="Control/TButtonMap1" method="_on_TButtonMap1_released"]
-[connection signal="button_up" from="Control/ButtonMap1" to="Control/ButtonMap1" method="_on_ButtonMap1_button_up"]
-[connection signal="button_up" from="Control/ButtonMap2" to="Control/ButtonMap2" method="_on_ButtonMap2_button_up"]
-[connection signal="button_up" from="Control/ButtonMap3" to="Control/ButtonMap3" method="_on_ButtonMap3_button_up"]
-[connection signal="button_up" from="Control/ButtonMap4" to="Control/ButtonMap4" method="_on_ButtonMap4_button_up"]
-[connection signal="button_up" from="Control/ButtonMap5" to="Control/ButtonMap5" method="_on_ButtonMap5_button_up"]
-[connection signal="button_up" from="Control/ButtonMapRandom" to="Control/ButtonMapRandom" method="_on_ButtonMapRandom_button_up"]
+[connection signal="released" from="Control/TButtonMap2" to="Control/TButtonMap2" method="_on_TButtonMap2_released"]
+[connection signal="released" from="Control/TButtonMap3" to="Control/TButtonMap3" method="_on_TButtonMap3_released"]
+[connection signal="released" from="Control/TButtonMap4" to="Control/TButtonMap4" method="_on_TButtonMap4_released"]
+[connection signal="released" from="Control/TButtonMap5" to="Control/TButtonMap5" method="_on_TButtonMap5_released"]
+[connection signal="released" from="Control/TRandMap" to="Control/TRandMap" method="_on_TRandMap_released"]
 [connection signal="released" from="Control/ReturnButton2" to="Control/ReturnButton2" method="_on_ReturnButton2_released"]

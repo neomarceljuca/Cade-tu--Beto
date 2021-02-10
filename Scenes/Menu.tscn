@@ -25,13 +25,13 @@ font_data = ExtResource( 11 )
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 245, 50 )
 
-[sub_resource type="DynamicFont" id=5]
+[sub_resource type="DynamicFont" id=3]
 size = 100
 outline_size = 2
 outline_color = Color( 0.419608, 0.227451, 0.227451, 1 )
 font_data = ExtResource( 11 )
 
-[sub_resource type="RectangleShape2D" id=3]
+[sub_resource type="RectangleShape2D" id=4]
 extents = Vector2( 220, 50 )
 
 [node name="Menu" type="Node2D"]
@@ -87,7 +87,7 @@ margin_top = -1.67821
 margin_right = 586.885
 margin_bottom = 123.322
 rect_rotation = -1.04982
-custom_fonts/normal_font = SubResource( 5 )
+custom_fonts/normal_font = SubResource( 3 )
 text = "Jogar"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -101,7 +101,7 @@ volume_db = 24.0
 position = Vector2( -715.913, 2.46075 )
 rotation = 0.000695139
 scale = Vector2( 2.76367, 3.24348 )
-shape = SubResource( 3 )
+shape = SubResource( 4 )
 script = ExtResource( 16 )
 
 [node name="SomClick" type="AudioStreamPlayer" parent="InitialMenu/PlacaMadeira/TouchCreditos"]
@@ -114,7 +114,7 @@ margin_top = 4.5551
 margin_right = 519.089
 margin_bottom = 129.555
 rect_rotation = -1.04982
-custom_fonts/normal_font = SubResource( 5 )
+custom_fonts/normal_font = SubResource( 3 )
 text = "Creditos"
 __meta__ = {
 "_edit_use_anchors_": false
