@@ -2,8 +2,8 @@
 
 [ext_resource path="res://Assets/Font/CHERL__.TTF" type="DynamicFontData" id=1]
 [ext_resource path="res://Assets/Font/KVMOTOR.TTF" type="DynamicFontData" id=2]
-[ext_resource path="res://Assets/Sprites/—Pngtree—green leaves branches fallen zero_937002.jpg" type="Texture" id=3]
-[ext_resource path="res://Assets/Sprites/kisspng-arrow-computer-icons-clip-art-arrow-5abf5d555c2ee2.1972264115224907093776.png" type="Texture" id=4]
+[ext_resource path="res://Assets/Sprites/bgLeaves.jpg" type="Texture" id=3]
+[ext_resource path="res://Assets/Sprites/returnArrow.png" type="Texture" id=4]
 [ext_resource path="res://Assets/Scripts/Return Button.gd" type="Script" id=5]
 [ext_resource path="res://Assets/Sound/Click.wav" type="AudioStream" id=6]
 
@@ -48,20 +48,20 @@ text = "Marcel Juca
 
 Pedro Leonardo Torquato
 
-Estudantes de Ciência da Computação da Universidade de Fortaleza"
+Estudantes de Ciencia da Computacao da Universidade de Fortaleza"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Return Button" type="TouchScreenButton" parent="."]
+[node name="ReturnButton" type="TouchScreenButton" parent="."]
 position = Vector2( 1366.61, 3.52741 )
 scale = Vector2( 0.153373, 0.153373 )
 normal = ExtResource( 4 )
 script = ExtResource( 5 )
 
-[node name="SomClick" type="AudioStreamPlayer2D" parent="Return Button"]
+[node name="SomClick" type="AudioStreamPlayer2D" parent="ReturnButton"]
 position = Vector2( -758.32, -8.53333 )
 scale = Vector2( 0.533333, 0.533333 )
 stream = ExtResource( 6 )
 volume_db = 10.0
-[connection signal="released" from="Return Button" to="Return Button" method="_on_Return_Button_released"]
+[connection signal="released" from="ReturnButton" to="ReturnButton" method="_on_Return_Button_released"]

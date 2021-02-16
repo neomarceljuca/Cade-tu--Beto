@@ -3,7 +3,7 @@
 [ext_resource path="res://Assets/Scripts/TesteTouchScreenButton.gd" type="Script" id=1]
 
 [sub_resource type="CircleShape2D" id=1]
-radius = 55.0
+radius = 60.0
 
 [node name="hud" type="CanvasLayer"]
 

@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Assets/Scripts/TButtonMap1.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Sprites/Mapa1.png" type="Texture" id=2]
-[ext_resource path="res://Assets/Sprites/kisspng-arrow-computer-icons-clip-art-arrow-5abf5d555c2ee2.1972264115224907093776.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Sprites/returnArrow.png" type="Texture" id=3]
 [ext_resource path="res://Assets/Sound/Click.wav" type="AudioStream" id=4]
 [ext_resource path="res://Assets/Scripts/TButtonMap2.gd" type="Script" id=5]
 [ext_resource path="res://Assets/Font/Kiddos-Demo.ttf" type="DynamicFontData" id=6]
@@ -13,7 +13,7 @@
 [ext_resource path="res://Assets/Sprites/Mapa2.png" type="Texture" id=11]
 [ext_resource path="res://Assets/Scripts/ReturnButton2.gd" type="Script" id=12]
 [ext_resource path="res://Assets/Scripts/MenuSelecaoMapa.gd" type="Script" id=13]
-[ext_resource path="res://Assets/Sprites/—Pngtree—green leaves branches fallen zero_937002.jpg" type="Texture" id=14]
+[ext_resource path="res://Assets/Sprites/bgLeaves.jpg" type="Texture" id=14]
 [ext_resource path="res://Assets/Scripts/TButtonMap4.gd" type="Script" id=15]
 [ext_resource path="res://Assets/Scripts/TButtonMap5.gd" type="Script" id=16]
 [ext_resource path="res://Assets/Scripts/TButtonMap3.gd" type="Script" id=17]
@@ -32,7 +32,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="—Pngtree—green leaves branches fallen zero_937002" type="Sprite" parent="Control"]
+[node name="BG" type="Sprite" parent="Control"]
 modulate = Color( 0.34902, 0.34902, 0.34902, 1 )
 position = Vector2( 784.232, 356.836 )
 scale = Vector2( 0.34206, 0.291112 )

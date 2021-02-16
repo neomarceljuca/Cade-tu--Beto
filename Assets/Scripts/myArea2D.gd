@@ -11,17 +11,8 @@ func _ready():
 	emissor_instance.set_name("MeuEmissor")
 	get_tree().root.add_child(emissor_instance)
 	placar = get_tree().root.get_node("Node2D/Display/CanvasLayer/Placar")
-	print(placar)
-	
-#func _input_event(viewport, event, shape_idx):
-#	if event is InputEventMouseButton \
-#	and event.button_index == BUTTON_LEFT \
-#	and event.is_pressed():
-#		self.on_click()
 
 func on_click():
-	print("Voce me achou!")
-	
 	emissor_instance.position.x = Beto.position.x
 	emissor_instance.position.y = Beto.position.y
 	emissor_instance.scale = Vector2(Beto.scale.x, Beto.scale.y)

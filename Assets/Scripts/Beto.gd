@@ -17,12 +17,11 @@ func _ready():
 func _physics_process(delta):
 	time += delta
 	myAlpha  = sin(time * 1)
-	
-	
+
 	$Sprite.modulate = Color($Sprite.modulate.r, $Sprite.modulate.g, $Sprite.modulate.b, myAlpha/ 4.0) 
 	
-	if Input.is_action_just_pressed("ui_accept"):
-		_hint()
+	#if Input.is_action_just_pressed("ui_accept"):
+	#	_hint()
 
 func _hint():
 	pass
@@ -49,5 +48,3 @@ func _randomPos():
 	self.scale = Vector2(myScale,myScale)
 	meuBotao.set_global_position(Vector2(position.x, position.y))
 	meuBotao.scale = Vector2(scale.x, scale.y)
-	
-	

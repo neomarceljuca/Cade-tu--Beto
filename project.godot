@@ -17,7 +17,7 @@ _global_script_class_icons={
 
 config/name="CadeTuBeto"
 run/main_scene="res://Scenes/Menu.tscn"
-config/icon="res://icon.png"
+config/icon="res://Assets/Sprites/icones/BetoIconePequeno.png"
 
 [autoload]
 
@@ -27,6 +27,7 @@ AudioStreamPlayer2d="*res://Assets/Scripts/AudioStreamPlayer2D.gd"
 
 window/size/width=1560
 window/size/height=720
+window/handheld/orientation="sensor_landscape"
 window/stretch/mode="2d"
 
 [input_devices]

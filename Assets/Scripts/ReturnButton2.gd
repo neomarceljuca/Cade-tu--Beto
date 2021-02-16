@@ -1,10 +1,7 @@
 extends TouchScreenButton
 
-
 func _ready():
-	pass # Replace with function body.
-
-
+	pass
 
 func _on_ReturnButton2_released():
 	get_node("SomClick").play()

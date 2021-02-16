@@ -9,6 +9,3 @@ func _ready():
 func incrementCounter():
 	counter = counter + 1
 	self.text = String(counter)
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
