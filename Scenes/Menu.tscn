@@ -16,12 +16,6 @@
 [ext_resource path="res://Assets/Sound/Click.wav" type="AudioStream" id=17]
 [ext_resource path="res://Scenes/Creditos.tscn" type="PackedScene" id=18]
 
-[sub_resource type="DynamicFont" id=1]
-size = 259
-outline_size = 2
-outline_color = Color( 0.419608, 0.227451, 0.227451, 1 )
-font_data = ExtResource( 11 )
-
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 245, 50 )
 
@@ -34,6 +28,12 @@ font_data = ExtResource( 11 )
 [sub_resource type="RectangleShape2D" id=4]
 extents = Vector2( 220, 50 )
 
+[sub_resource type="DynamicFont" id=1]
+size = 259
+outline_size = 2
+outline_color = Color( 0.419608, 0.227451, 0.227451, 1 )
+font_data = ExtResource( 11 )
+
 [node name="Menu" type="Node2D"]
 script = ExtResource( 13 )
 
@@ -43,45 +43,33 @@ stream = ExtResource( 5 )
 autoplay = true
 script = ExtResource( 8 )
 
-[node name="InitialMenu" type="Node2D" parent="."]
+[node name="menuHUD" type="CanvasLayer" parent="."]
 
-[node name="menuBackground" type="Sprite" parent="InitialMenu"]
+[node name="InitialMenu" type="Node2D" parent="menuHUD"]
+
+[node name="menuBackground" type="Sprite" parent="menuHUD/InitialMenu"]
 position = Vector2( 792.5, 377.428 )
 scale = Vector2( 2.55431, 1.94555 )
 texture = ExtResource( 2 )
 
-[node name="PlacaMadeira" type="Sprite" parent="InitialMenu"]
+[node name="PlacaMadeira" type="Sprite" parent="menuHUD/InitialMenu"]
 position = Vector2( 574.895, 373.438 )
 rotation = -0.0461188
 scale = Vector2( 0.361983, 0.308221 )
 texture = ExtResource( 10 )
 
-[node name="RichTextLabel" type="RichTextLabel" parent="InitialMenu/PlacaMadeira"]
-margin_left = -703.686
-margin_top = -904.153
-margin_right = 623.314
-margin_bottom = -427.153
-rect_rotation = -8.15254
-custom_fonts/normal_font = SubResource( 1 )
-text = "Cade tu, beto"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Sprite" type="Sprite" parent="InitialMenu/PlacaMadeira"]
-position = Vector2( -126.616, 1040.33 )
-rotation = 0.0136102
-scale = Vector2( 5.19621, 1.6311 )
-texture = ExtResource( 12 )
-
-[node name="TouchMapas" type="TouchScreenButton" parent="InitialMenu/PlacaMadeira"]
+[node name="TouchMapas" type="TouchScreenButton" parent="menuHUD/InitialMenu/PlacaMadeira"]
 position = Vector2( -746.996, -534.469 )
 rotation = 0.069507
 scale = Vector2( 2.76367, 3.24348 )
 shape = SubResource( 2 )
 script = ExtResource( 15 )
 
-[node name="JogarTexto" type="RichTextLabel" parent="InitialMenu/PlacaMadeira/TouchMapas"]
+[node name="SomClick" type="AudioStreamPlayer" parent="menuHUD/InitialMenu/PlacaMadeira/TouchMapas"]
+stream = ExtResource( 17 )
+volume_db = 24.0
+
+[node name="JogarTexto" type="RichTextLabel" parent="menuHUD/InitialMenu/PlacaMadeira/TouchMapas"]
 margin_left = 129.885
 margin_top = -1.67821
 margin_right = 586.885
@@ -93,22 +81,18 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="SomClick" type="AudioStreamPlayer" parent="InitialMenu/PlacaMadeira/TouchMapas"]
-stream = ExtResource( 17 )
-volume_db = 24.0
-
-[node name="TouchCreditos" type="TouchScreenButton" parent="InitialMenu/PlacaMadeira"]
-position = Vector2( -715.913, 2.46075 )
-rotation = 0.000695139
+[node name="TouchCreditos" type="TouchScreenButton" parent="menuHUD/InitialMenu/PlacaMadeira"]
+position = Vector2( -715.913, 2.46069 )
+rotation = 0.000695133
 scale = Vector2( 2.76367, 3.24348 )
 shape = SubResource( 4 )
 script = ExtResource( 16 )
 
-[node name="SomClick" type="AudioStreamPlayer" parent="InitialMenu/PlacaMadeira/TouchCreditos"]
+[node name="SomClick" type="AudioStreamPlayer" parent="menuHUD/InitialMenu/PlacaMadeira/TouchCreditos"]
 stream = ExtResource( 17 )
 volume_db = 24.0
 
-[node name="JogarTexto2" type="RichTextLabel" parent="InitialMenu/PlacaMadeira/TouchCreditos"]
+[node name="JogarTexto2" type="RichTextLabel" parent="menuHUD/InitialMenu/PlacaMadeira/TouchCreditos"]
 margin_left = 62.0893
 margin_top = 4.5551
 margin_right = 519.089
@@ -120,21 +104,39 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="BetoVerde" type="Sprite" parent="InitialMenu"]
+[node name="RichTextLabel" type="RichTextLabel" parent="menuHUD/InitialMenu/PlacaMadeira"]
+margin_left = -703.686
+margin_top = -904.153
+margin_right = 623.314
+margin_bottom = -427.153
+rect_rotation = -8.15254
+custom_fonts/normal_font = SubResource( 1 )
+text = "Cade tu, beto"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="sombragrama" type="Sprite" parent="menuHUD/InitialMenu/PlacaMadeira"]
+position = Vector2( -126.616, 1040.33 )
+rotation = 0.0136102
+scale = Vector2( 5.19621, 1.6311 )
+texture = ExtResource( 12 )
+
+[node name="BetoVerde" type="Sprite" parent="menuHUD/InitialMenu"]
 position = Vector2( 1160.95, 415.227 )
 scale = Vector2( 0.541667, 0.541667 )
 texture = ExtResource( 4 )
 
-[node name="BetoOverLay" type="Sprite" parent="InitialMenu"]
+[node name="BetoOverLay" type="Sprite" parent="menuHUD/InitialMenu"]
 position = Vector2( 1160.95, 415.227 )
 scale = Vector2( 0.542, 0.542 )
 texture = ExtResource( 7 )
 script = ExtResource( 6 )
 
-[node name="MenuSelecaoMapa" parent="." instance=ExtResource( 14 )]
+[node name="MenuSelecaoMapa" parent="menuHUD" instance=ExtResource( 14 )]
 visible = false
 
-[node name="Creditos" parent="." instance=ExtResource( 18 )]
+[node name="Creditos" parent="menuHUD" instance=ExtResource( 18 )]
 visible = false
-[connection signal="released" from="InitialMenu/PlacaMadeira/TouchMapas" to="InitialMenu/PlacaMadeira/TouchMapas" method="_on_TouchMapas_released"]
-[connection signal="released" from="InitialMenu/PlacaMadeira/TouchCreditos" to="InitialMenu/PlacaMadeira/TouchCreditos" method="_on_TouchCreditos_released"]
+[connection signal="released" from="menuHUD/InitialMenu/PlacaMadeira/TouchMapas" to="menuHUD/InitialMenu/PlacaMadeira/TouchMapas" method="_on_TouchMapas_released"]
+[connection signal="released" from="menuHUD/InitialMenu/PlacaMadeira/TouchCreditos" to="menuHUD/InitialMenu/PlacaMadeira/TouchCreditos" method="_on_TouchCreditos_released"]

@@ -1,10 +1,9 @@
 extends TouchScreenButton
 
 func _ready():
-	pass # Replace with function body.
-
+	pass
 
 func _on_TouchCreditos_released():
 	get_node("SomClick").play()
-	get_node("/root").get_node("Menu/InitialMenu").visible = false
-	get_node("/root/Menu/Creditos").visible = true
+	get_node("/root/Menu/menuHUD/Creditos").visible = true
+	get_node("/root").get_node("Menu/menuHUD/InitialMenu").visible = false
