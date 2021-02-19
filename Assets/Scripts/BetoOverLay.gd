@@ -12,3 +12,7 @@ func _process(delta):
 	
 	modulate = Color(a, b, c, 1) 
 	
+
+func _on_BetoInteractMenu_released():
+	get_parent().get_node("SomClick2").play()
+	time = time + 1

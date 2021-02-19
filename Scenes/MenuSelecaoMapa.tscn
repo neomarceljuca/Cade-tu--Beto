@@ -1,11 +1,11 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://Assets/Scripts/TButtonMap1.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Sprites/Mapa1.png" type="Texture" id=2]
 [ext_resource path="res://Assets/Sprites/returnArrow.png" type="Texture" id=3]
 [ext_resource path="res://Assets/Sound/Click.wav" type="AudioStream" id=4]
 [ext_resource path="res://Assets/Scripts/TButtonMap2.gd" type="Script" id=5]
-[ext_resource path="res://Assets/Font/Kiddos-Demo.ttf" type="DynamicFontData" id=6]
+[ext_resource path="res://Assets/Font/Aleatorio.png" type="Texture" id=6]
 [ext_resource path="res://Assets/Sprites/Mapa4.png" type="Texture" id=7]
 [ext_resource path="res://Assets/Scripts/TRandMap.gd" type="Script" id=8]
 [ext_resource path="res://Assets/Sprites/Mapa3.png" type="Texture" id=9]
@@ -17,10 +17,6 @@
 [ext_resource path="res://Assets/Scripts/TButtonMap4.gd" type="Script" id=15]
 [ext_resource path="res://Assets/Scripts/TButtonMap5.gd" type="Script" id=16]
 [ext_resource path="res://Assets/Scripts/TButtonMap3.gd" type="Script" id=17]
-
-[sub_resource type="DynamicFont" id=1]
-size = 100
-font_data = ExtResource( 6 )
 
 [node name="MenuSelecaoMapa" type="Node2D"]
 
@@ -81,23 +77,15 @@ scale = Vector2( 0.0792094, 0.0787315 )
 normal = ExtResource( 14 )
 script = ExtResource( 8 )
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Control"]
-anchor_right = 20.397
-anchor_bottom = 8.079
-margin_left = 1069.34
-margin_top = 537.722
-margin_right = 611.456
-margin_bottom = 327.562
-rect_rotation = -14.9938
-custom_fonts/normal_font = SubResource( 1 )
-text = "Aleatorio"
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="Aleatorio" type="Sprite" parent="Control"]
+position = Vector2( 1245.32, 560.782 )
+rotation = -0.256852
+scale = Vector2( 1.29887, 1.52024 )
+texture = ExtResource( 6 )
 
 [node name="ReturnButton2" type="TouchScreenButton" parent="Control"]
-position = Vector2( 1345.43, 10.0906 )
-scale = Vector2( 0.15582, 0.15582 )
+position = Vector2( 1320.93, 10.0906 )
+scale = Vector2( 0.17496, 0.17496 )
 normal = ExtResource( 3 )
 script = ExtResource( 12 )
 

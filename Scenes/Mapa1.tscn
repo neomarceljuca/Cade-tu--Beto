@@ -17,4 +17,5 @@ texture = ExtResource( 1 )
 [node name="Display" parent="." instance=ExtResource( 3 )]
 
 [node name="Beto" parent="." instance=ExtResource( 2 )]
-position = Vector2( 462.253, 224.407 )
+position = Vector2( 486.064, 191.072 )
+scale = Vector2( 1, 1 )

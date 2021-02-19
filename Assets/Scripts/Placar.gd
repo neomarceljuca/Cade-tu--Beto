@@ -8,4 +8,8 @@ func _ready():
 
 func incrementCounter():
 	counter = counter + 1
+	if counter > 9999:
+		$youWon.play()
+		counter = 0
+	
 	self.text = String(counter)
