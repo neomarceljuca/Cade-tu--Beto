@@ -12,6 +12,7 @@ func _ready():
 	rng.randomize()
 	screen = get_viewport().size
 	_randomPos()
+	visible = false
 
 
 func _physics_process(delta):
