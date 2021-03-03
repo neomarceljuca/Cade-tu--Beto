@@ -13,7 +13,7 @@ func _ready():
 
 func incrementCounter():
 	counter = counter + 1
-	if counter > 9999:
+	if counter > 999999:
 		$youWon.play()
 		counter = 0
 	
