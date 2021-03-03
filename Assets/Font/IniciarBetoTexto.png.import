@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/IniciarBetoTexto_0000_Beto-estará-escondido-pelo-mapa!-Encontre-ele-e-acumule-pontos!.png-75c5de5c2bb0681a5ce9e028a93a5a8d.stex"
+path="res://.import/IniciarBetoTexto.png-3dd14aab0f0f7e18679cc4f32cc45cab.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Font/IniciarBetoTexto_0000_Beto-estará-escondido-pelo-mapa!-Encontre-ele-e-acumule-pontos!.png"
-dest_files=[ "res://.import/IniciarBetoTexto_0000_Beto-estará-escondido-pelo-mapa!-Encontre-ele-e-acumule-pontos!.png-75c5de5c2bb0681a5ce9e028a93a5a8d.stex" ]
+source_file="res://Assets/Font/IniciarBetoTexto.png"
+dest_files=[ "res://.import/IniciarBetoTexto.png-3dd14aab0f0f7e18679cc4f32cc45cab.stex" ]
 
 [params]
 

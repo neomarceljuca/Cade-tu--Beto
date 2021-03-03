@@ -3,7 +3,7 @@
 [ext_resource path="res://Assets/Sprites/BetoWhiteNShade.png" type="Texture" id=1]
 [ext_resource path="res://Scenes/BetoPisca.gd" type="Script" id=2]
 [ext_resource path="res://Assets/Scripts/startGame.gd" type="Script" id=3]
-[ext_resource path="res://Assets/Font/IniciarBetoTexto_0000_Beto-estará-escondido-pelo-mapa!-Encontre-ele-e-acumule-pontos!.png" type="Texture" id=4]
+[ext_resource path="res://Assets/Font/IniciarBetoTexto.png" type="Texture" id=4]
 
 [sub_resource type="GradientTexture" id=1]
 
