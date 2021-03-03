@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=25 format=2]
 
 [ext_resource path="res://Assets/Font/CadeTuBeto.png" type="Texture" id=1]
 [ext_resource path="res://Assets/Sprites/menuBackground.png" type="Texture" id=2]
@@ -8,15 +8,17 @@
 [ext_resource path="res://Assets/Scripts/BetoOverLay.gd" type="Script" id=6]
 [ext_resource path="res://Assets/Sprites/BetoMenosLingua.png" type="Texture" id=7]
 [ext_resource path="res://Assets/Scripts/AudioStreamPlayer2D.gd" type="Script" id=8]
+[ext_resource path="res://Assets/Font/CHERL__.TTF" type="DynamicFontData" id=9]
 [ext_resource path="res://Assets/Sprites/PlacaMadeira.png" type="Texture" id=10]
 [ext_resource path="res://Assets/Font/Kiddos-Demo.ttf" type="DynamicFontData" id=11]
 [ext_resource path="res://Assets/Sprites/sombra.png" type="Texture" id=12]
-[ext_resource path="res://Assets/Scripts/Menu.gd" type="Script" id=13]
+[ext_resource path="res://Assets/Font/recorde.png" type="Texture" id=13]
 [ext_resource path="res://Scenes/MenuSelecaoMapa.tscn" type="PackedScene" id=14]
 [ext_resource path="res://Assets/Scripts/TouchMapas.gd" type="Script" id=15]
 [ext_resource path="res://Assets/Scripts/TouchCreditos.gd" type="Script" id=16]
 [ext_resource path="res://Assets/Sound/Click.wav" type="AudioStream" id=17]
 [ext_resource path="res://Scenes/Creditos.tscn" type="PackedScene" id=18]
+[ext_resource path="res://Scenes/recordValue.gd" type="Script" id=19]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 245, 50 )
@@ -33,8 +35,11 @@ extents = Vector2( 220, 50 )
 [sub_resource type="CircleShape2D" id=4]
 radius = 400.0
 
+[sub_resource type="DynamicFont" id=5]
+size = 64
+font_data = ExtResource( 9 )
+
 [node name="Menu" type="Node2D"]
-script = ExtResource( 13 )
 
 [node name="BGM" type="AudioStreamPlayer2D" parent="."]
 position = Vector2( 38, -32 )
@@ -128,6 +133,22 @@ volume_db = 24.0
 position = Vector2( -46.5442, -12.4117 )
 texture = ExtResource( 7 )
 script = ExtResource( 6 )
+
+[node name="recordValue" type="RichTextLabel" parent="menuHUD/InitialMenu"]
+margin_left = 1290.0
+margin_top = 10.0
+margin_right = 1551.0
+margin_bottom = 102.0
+custom_fonts/normal_font = SubResource( 5 )
+text = "000000"
+script = ExtResource( 19 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="recorde" type="Sprite" parent="menuHUD/InitialMenu"]
+position = Vector2( 1206.14, 52.0428 )
+texture = ExtResource( 13 )
 
 [node name="MenuSelecaoMapa" parent="menuHUD" instance=ExtResource( 14 )]
 visible = false
