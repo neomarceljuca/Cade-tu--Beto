@@ -45,7 +45,7 @@ func _randomPos():
 	time = 0
 	$Sprite.modulate = Color($Sprite.modulate.r, $Sprite.modulate.g, $Sprite.modulate.b, 0)
 	set_global_position(Vector2(rng.randi_range(50, screen.x -50) , rng.randi_range(180, screen.y -50) ))
-	var myScale = rng.randf_range(0.5,1.45)
+	var myScale = rng.randf_range(0.7,1.45)
 	self.scale = Vector2(myScale,myScale)
 	meuBotao.set_global_position(Vector2(position.x, position.y))
 	meuBotao.scale = Vector2(scale.x, scale.y)

@@ -1,15 +1,24 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Assets/Scripts/TesteTouchScreenButton.gd" type="Script" id=1]
+[ext_resource path="res://Scenes/TesteLocation.gd" type="Script" id=2]
 
-[sub_resource type="CircleShape2D" id=1]
+[sub_resource type="CircleShape2D" id=2]
 radius = 96.0
 
 [node name="hud" type="CanvasLayer"]
 
+[node name="Control" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="TesteTouchScreenButton" type="TouchScreenButton" parent="."]
-position = Vector2( 493.883, 194.186 )
-shape = SubResource( 1 )
+position = Vector2( 795.007, 359.893 )
+shape = SubResource( 2 )
 shape_centered = false
 script = ExtResource( 1 )
 [connection signal="pressed" from="TesteTouchScreenButton" to="TesteTouchScreenButton" method="_on_TesteTouchScreenButton_pressed"]

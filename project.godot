@@ -18,6 +18,7 @@ _global_script_class_icons={
 config/name="CadeTuBeto"
 run/main_scene="res://Scenes/Menu.tscn"
 config/use_custom_user_dir=true
+boot_splash/use_filter=false
 config/icon="res://Assets/Sprites/icones/BetoIconePequeno.png"
 
 [autoload]
